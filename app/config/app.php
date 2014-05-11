@@ -112,6 +112,8 @@ return array(
         'Barryvdh\Debugbar\ServiceProvider',
         'Intervention\Image\ImageServiceProvider',
 
+        'Way\Generators\GeneratorsServiceProvider',
+
     ),
 
     /*
