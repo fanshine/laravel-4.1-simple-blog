@@ -113,6 +113,8 @@ return array(
         'Intervention\Image\ImageServiceProvider',
         'Mews\Captcha\CaptchaServiceProvider',
 
+        'Way\Generators\GeneratorsServiceProvider',
+
     ),
 
     /*

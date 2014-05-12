@@ -8,12 +8,13 @@
 		"intervention/image": "dev-master",
 		"yzalis/identicon": "1.0.*@dev",
 		"michelf/php-markdown": "1.4.0",
-		"nickcernis/html-to-markdown": "dev-master",
-        "mews/captcha": "dev-master"
+		"nickcernis/html-to-markdown": "dev-master"
 	},
 	"require-dev": {
 		"barryvdh/laravel-debugbar": "1.*",
-		"five-say/vendor-cleaner": "1.*"
+		"five-say/vendor-cleaner": "1.*",
+        "way/generators": "dev-master",
+        "mews/captcha": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -46,6 +47,4 @@
 		"preferred-install": "dist"
 	},
 	"minimum-stability": "stable"
-    // "minimum-stability": "dev"
-
 }
