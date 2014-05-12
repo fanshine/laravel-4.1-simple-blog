@@ -46,6 +46,7 @@ class Assists_database_Authority
             $table->boolean('is_admin')      ->default(0)->comment('是否管理员，1-管理员，0-普通用户');
             $table->timestamp('signin_at')   ->nullable()->comment('最后登录时间');
             $table->timestamp('activated_at')->nullable()->comment('邮箱激活时间');
+            $table->string('remember_token', 200)->nullable()->comment('记住用户功能的token');
             $table->timestamps();
             $table->softDeletes();
         });

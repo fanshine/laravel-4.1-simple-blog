@@ -118,3 +118,31 @@ Route::group(array(), function () {
 | 特殊功能
 |--------------------------------------------------------------------------
 */
+
+
+// 验证码测试
+Route::any('/captcha', function()
+{
+
+    if (Request::getMethod() == 'POST')
+    {
+        $rules =  array('captcha' => array('required', 'captcha'));
+        $validator = Validator::make(Input::all(), $rules);
+        if ($validator->fails())
+        {
+            echo '<p style="color: #ff0000;">Incorrect!</p>';
+        }
+        else
+        {
+            echo '<p style="color: #00ff30;">Matched :)</p>';
+        }
+    }
+
+    $content = Form::open(array(URL::to(Request::segment(1))));
+    $content .= '<p>' . HTML::image(Captcha::img(), 'Captcha image') . '</p>';
+    $content .= '<p>' . Form::text('captcha') . '</p>';
+    $content .= '<p>' . Form::submit('Check') . '</p>';
+    $content .= '<p>' . Form::close() . '</p>';
+    return $content;
+
+});

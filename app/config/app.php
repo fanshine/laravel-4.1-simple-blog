@@ -111,6 +111,7 @@ return array(
 
         'Barryvdh\Debugbar\ServiceProvider',
         'Intervention\Image\ImageServiceProvider',
+        'Mews\Captcha\CaptchaServiceProvider',
 
     ),
 
@@ -181,6 +182,7 @@ return array(
         'Carbon'          => 'Carbon\Carbon',
         'Image'           => 'Intervention\Image\Facades\Image',
         'Identicon'       => 'Identicon\Identicon',
+        'Captcha'         => 'Mews\Captcha\Facades\Captcha',
 
     ),
 

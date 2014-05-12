@@ -16,6 +16,8 @@ class Comment extends BaseModel
      */
     protected $softDelete = true;
 
+    protected $touches = array('article');
+
     /**
      * 模型对象关系：归属文章
      * @return object Article

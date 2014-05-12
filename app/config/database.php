@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'laravel-4.1-simple-blog',
+			'database'  => 'laravel_4_1_simple_blog',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'ctfo6789',
 			'charset'   => 'utf8',
 			// 'collation' => 'utf8_unicode_ci',
 			'collation' => 'utf8_general_ci',

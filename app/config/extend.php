@@ -33,7 +33,7 @@ return array(
             'google::jquery-1.10.2' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
             'bootstrap-2.3.2'       => 'assets/bootstrap-2.3.2/js/bootstrap.min.js',
             'bootstrap-3.0.3'       => 'assets/bootstrap-3.0.3/js/bootstrap.min.js',
-            
+
             'bootstrap-2-switch'    => 'assets/bootstrap-switch/js/bootstrap-switch.min.js',
             'bootstrap-3-switch'    => 'assets/bootstrap-switch/js/bootstrap-switch.min.js',
 
