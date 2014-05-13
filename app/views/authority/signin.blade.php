@@ -47,7 +47,7 @@
         <input name="email" value="{{ Input::old('email') }}" type="text" class="form-control" placeholder="邮箱" required autofocus>
         <input name="password" type="password" class="form-control" placeholder="密码" required>
         <input name="captcha" type="text" class="form-control" placeholder="验证码" required>
-        <img src="{{ Captcha::img() }}" alt="">
+        <img id="captchaImg" src="{{ Captcha::img() }}" alt=""><a href="javascript:changeCaptcha();">看不清</a>
         <label class="checkbox">
             <input type="checkbox" name="remember-me" value="1"> 记住我
             <a href="{{ route('forgotPassword') }}" style="float:right;">忘记密码 &gt;&gt;&gt;</a>
@@ -60,3 +60,11 @@
     {{ Form::close() }}
 
 @stop
+@section('end')
+<script>
+    function changeCaptcha () {
+        // debugger;
+        captchaImg.src = {{ '"'.URL::to('captcha?').'"' }} + ((Math.random()*9 +1)*100000).toFixed(0);
+    }
+</script>
+@parent @stop
