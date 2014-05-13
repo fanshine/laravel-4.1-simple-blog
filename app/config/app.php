@@ -109,11 +109,13 @@ return array(
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
 
+        'Way\Generators\GeneratorsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
         'Intervention\Image\ImageServiceProvider',
-        'Mews\Captcha\CaptchaServiceProvider',
 
-        'Way\Generators\GeneratorsServiceProvider',
+        // 'Gwill\LaravelCaptcha\LaravelCaptchaServiceProvider',
+        // 'Greggilbert\Recaptcha\RecaptchaServiceProvider',
+        'Johntaa\Captcha\CaptchaServiceProvider',
 
     ),
 
@@ -184,7 +186,8 @@ return array(
         'Carbon'          => 'Carbon\Carbon',
         'Image'           => 'Intervention\Image\Facades\Image',
         'Identicon'       => 'Identicon\Identicon',
-        'Captcha'         => 'Mews\Captcha\Facades\Captcha',
+        // 'Captcha'         => 'Gwill\LaravelCaptcha\Facades\LaravelCaptcha',
+        'Captcha'         => 'Johntaa\Captcha\Facades\Captcha',
 
     ),
 

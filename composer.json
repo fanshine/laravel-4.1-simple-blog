@@ -14,7 +14,9 @@
 		"barryvdh/laravel-debugbar": "1.*",
 		"five-say/vendor-cleaner": "1.*",
         "way/generators": "dev-master",
-        "mews/captcha": "dev-master"
+        // "gwill/laravel-captcha": "dev-master",
+        "johntaa/captcha": "dev-master",
+        "greggilbert/recaptcha": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

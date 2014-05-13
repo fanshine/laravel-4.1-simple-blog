@@ -46,6 +46,8 @@
         <h2 class="form-signin-heading">用户登录</h2>
         <input name="email" value="{{ Input::old('email') }}" type="text" class="form-control" placeholder="邮箱" required autofocus>
         <input name="password" type="password" class="form-control" placeholder="密码" required>
+        <input name="captcha" type="text" class="form-control" placeholder="验证码" required>
+        <img src="{{ Captcha::img() }}" alt="">
         <label class="checkbox">
             <input type="checkbox" name="remember-me" value="1"> 记住我
             <a href="{{ route('forgotPassword') }}" style="float:right;">忘记密码 &gt;&gt;&gt;</a>

@@ -17,7 +17,7 @@ $is_active = function ($name='') use ($active)
                 <span class="sr-only">切换菜单栏</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar></span>
             </button>
             <a class="navbar-brand" href="{{ route('home') }}">Demo</a>
         </div>

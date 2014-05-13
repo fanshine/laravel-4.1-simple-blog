@@ -10,7 +10,7 @@ class AuthorityController extends BaseController
     {
         return View::make('authority.signin');
     }
-    
+
     /**
      * 动作：登录
      * @return Response
@@ -21,6 +21,19 @@ class AuthorityController extends BaseController
         $credentials = array('email'=>Input::get('email'), 'password'=>Input::get('password'));
         // 是否记住登录状态
         $remember    = Input::get('remember-me', 0);
+
+        $captcha = array('captcha' => Input::get('captcha'));
+        $rules = array('captcha' => 'required|captcha');
+        // $messages = array(
+        //     'captcha.required' => '请输入验证码',
+        //     'captcha.captcha' => '验证码错误'
+        // );
+        $validator = Validator::make($captcha, $rules);
+        if (!$validator->passes()) {
+            return Redirect::back()
+                ->withInput()
+                ->withErrors(['attempt' => '“验证码“错误，请重新登录。']); //
+        }
         // 验证登录
         if (Auth::attempt($credentials, $remember)) {
             // 登录成功，跳回之前被拦截的页面
@@ -42,7 +55,7 @@ class AuthorityController extends BaseController
         Auth::logout();
         return Redirect::to('/');
     }
-    
+
     /**
      * 页面：注册
      * @return Response
@@ -51,7 +64,7 @@ class AuthorityController extends BaseController
     {
         return View::make('authority.signup');
     }
-    
+
     /**
      * 动作：注册
      * @return Response
@@ -111,7 +124,7 @@ class AuthorityController extends BaseController
                 ->withErrors($validator);
         }
     }
-    
+
     /**
      * 页面：注册成功，提示激活
      * @param  string $email 用户注册的邮箱

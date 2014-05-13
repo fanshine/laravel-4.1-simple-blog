@@ -31,6 +31,35 @@ Route::group(array('prefix' => 'auth'), function () {
         Route::get(  'forgot-password/{token}', array('as' => 'reset'         , 'uses' => $Authority.'getReset'));
         Route::post( 'forgot-password/{token}', $Authority.'postReset');
     });
+    // 验证码测试
+    Route::any('test', function()
+    {
+        if (Request::getMethod() == 'POST')
+        {
+            $rules =  array('captcha' => 'required|captcha');
+            $validator = Validator::make(Input::all(), $rules);
+            if ($validator->fails())
+            {
+                echo '<p style="color: #ff0000;">Incorrect!</p>';
+            }
+            else
+            {
+                echo '<p style="color: #00ff30;">Matched :)</p>';
+            }
+        }
+
+        $content = Form::open(array(URL::to(Request::segment(1))));
+        $content .= '<p>' . HTML::image(Captcha::img(), 'Captcha image') . '</p>';
+        // $content .= Captcha::url();
+        $content .= '<p>' . Form::text('captcha') . '</p>';
+        $content .= '<p>' . Form::submit('Check') . '</p>';
+        $content .= '<p>' . Form::close() . '</p>';
+        return $content;
+        // return HTML::image(Captcha::img(), 'Captcha image');
+        // return View::make('captcha');
+        //
+        // return Captcha::create();
+    });
 });
 /*
 |--------------------------------------------------------------------------
@@ -118,31 +147,3 @@ Route::group(array(), function () {
 | 特殊功能
 |--------------------------------------------------------------------------
 */
-
-
-// 验证码测试
-Route::any('/captcha', function()
-{
-
-    if (Request::getMethod() == 'POST')
-    {
-        $rules =  array('captcha' => array('required', 'captcha'));
-        $validator = Validator::make(Input::all(), $rules);
-        if ($validator->fails())
-        {
-            echo '<p style="color: #ff0000;">Incorrect!</p>';
-        }
-        else
-        {
-            echo '<p style="color: #00ff30;">Matched :)</p>';
-        }
-    }
-
-    $content = Form::open(array(URL::to(Request::segment(1))));
-    $content .= '<p>' . HTML::image(Captcha::img(), 'Captcha image') . '</p>';
-    $content .= '<p>' . Form::text('captcha') . '</p>';
-    $content .= '<p>' . Form::submit('Check') . '</p>';
-    $content .= '<p>' . Form::close() . '</p>';
-    return $content;
-
-});
