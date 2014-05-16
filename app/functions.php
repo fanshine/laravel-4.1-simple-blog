@@ -17,13 +17,13 @@
  * @param  string  $parameters
  * @return string
  */
-function route($route, $parameters = array())
-{
-    if (Route::getRoutes()->hasNamedRoute($route))
-        return app('url')->route($route, $parameters);
-    else
-        return 'javascript:void(0)';
-}
+// function route($route, $parameters = array())
+// {
+//     if (Route::getRoutes()->hasNamedRoute($route))
+//         return app('url')->route($route, $parameters);
+//     else
+//         return 'javascript:void(0)';
+// }
 
 /**
  * Generate a HTML link to a named route.
@@ -34,13 +34,13 @@ function route($route, $parameters = array())
  * @param  array   $attributes
  * @return string
  */
-function link_to_route($name, $title = null, $parameters = array(), $attributes = array())
-{
-    if (Route::getRoutes()->hasNamedRoute($name))
-        return app('html')->linkRoute($name, $title, $parameters, $attributes);
-    else
-        return '<a href="javascript:void(0)"'.HTML::attributes($attributes).'>'.$name.'</a>';
-}
+// function link_to_route($name, $title = null, $parameters = array(), $attributes = array())
+// {
+//     if (Route::getRoutes()->hasNamedRoute($name))
+//         return app('html')->linkRoute($name, $title, $parameters, $attributes);
+//     else
+//         return '<a href="javascript:void(0)"'.HTML::attributes($attributes).'>'.$name.'</a>';
+// }
 
 
 /*
