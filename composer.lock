@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f933158c452bf6703aec44850f45ec2f",
+    "hash": "e41d7306e4e1bfff47a96ac7a52b7c3b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1926,58 +1926,6 @@
             "time": "2014-02-22 04:22:49"
         },
         {
-            "name": "greggilbert/recaptcha",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/greggilbert/recaptcha.git",
-                "reference": "c2f49a56de656b4d4f96bd83fc4e131d9a120040"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/greggilbert/recaptcha/zipball/c2f49a56de656b4d4f96bd83fc4e131d9a120040",
-                "reference": "c2f49a56de656b4d4f96bd83fc4e131d9a120040",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "*",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/migrations"
-                ],
-                "psr-0": {
-                    "Greggilbert\\Recaptcha": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Greg Gilbert",
-                    "email": "greg@greg-gilbert.com"
-                }
-            ],
-            "description": "reCAPTCHA Validator for Laravel 4",
-            "homepage": "http://github.com/greggilbert/recaptcha",
-            "keywords": [
-                "captcha",
-                "laravel",
-                "laravel4",
-                "recaptcha"
-            ],
-            "time": "2014-05-03 04:11:46"
-        },
-        {
             "name": "johntaa/captcha",
             "version": "dev-master",
             "source": {
@@ -2015,6 +1963,65 @@
                 }
             ],
             "time": "2014-03-07 20:24:14"
+        },
+        {
+            "name": "laravelbook/ardent",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravelbook/ardent.git",
+                "reference": "0a0238b8040abc1c71401ce27a8edf2619fa5bed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravelbook/ardent/zipball/0a0238b8040abc1c71401ce27a8edf2619fa5bed",
+                "reference": "0a0238b8040abc1c71401ce27a8edf2619fa5bed",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~4.1",
+                "illuminate/support": "~4.1",
+                "illuminate/validation": "~4.1",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LaravelBook\\Ardent": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Max Ehsan",
+                    "email": "contact@laravelbook.com",
+                    "homepage": "http://laravelbook.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Igor Santos",
+                    "email": "igorsantos07@gmail.com",
+                    "homepage": "http://www.igorsantos.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Self-validating smart models for Laravel 4's Eloquent O/RM",
+            "homepage": "http://laravelbook.com/",
+            "keywords": [
+                "Active Record",
+                "activerecord",
+                "database",
+                "eloquent",
+                "framework",
+                "laravel",
+                "orm",
+                "sql",
+                "validation"
+            ],
+            "time": "2014-02-25 20:39:04"
         },
         {
             "name": "maximebf/debugbar",
@@ -2539,8 +2546,8 @@
         "yzalis/identicon": 20,
         "nickcernis/html-to-markdown": 20,
         "way/generators": 20,
-        "johntaa/captcha": 20,
-        "greggilbert/recaptcha": 20
+        "laravelbook/ardent": 20,
+        "johntaa/captcha": 20
     },
     "platform": [
 

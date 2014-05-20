@@ -15,8 +15,9 @@
         "phpunit/phpunit": "3.7.*",
         "five-say/vendor-cleaner": "1.*",
         "way/generators": "dev-master",
-        "johntaa/captcha": "dev-master",
-        "greggilbert/recaptcha": "dev-master"
+        "laravelbook/ardent": "dev-master",
+        "johntaa/captcha": "dev-master"
+        // "greggilbert/recaptcha": "dev-master"
     },
     "autoload": {
         "classmap": [
