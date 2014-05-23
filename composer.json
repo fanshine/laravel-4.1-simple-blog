@@ -17,7 +17,6 @@
         "way/generators": "dev-master",
         "laravelbook/ardent": "dev-master",
         "johntaa/captcha": "dev-master"
-        // "greggilbert/recaptcha": "dev-master"
     },
     "autoload": {
         "classmap": [
