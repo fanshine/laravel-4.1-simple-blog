@@ -30,8 +30,8 @@ class User extends Ardent implements UserInterface, RemindableInterface
     public static $rules = array(
         // 'username' => 'required|between:4,16',
         'email' => 'required|email',
-        'password' => 'required|alpha_num|min:8|confirmed',
-        'password_confirmation' => 'required|alpha_num|min:8',
+        'password' => 'required|min:6|confirmed',
+        'password_confirmation' => 'required|min:6',
     );
 
     /**

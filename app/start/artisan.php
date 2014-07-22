@@ -11,3 +11,6 @@
 |
 */
 
+// $artisan->add(new UserGeneratorCommand);
+$user = new User;
+Artisan::add(new UserGeneratorCommand($user));

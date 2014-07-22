@@ -116,6 +116,7 @@ return array(
         // 'Gwill\LaravelCaptcha\LaravelCaptchaServiceProvider',
         // 'Greggilbert\Recaptcha\RecaptchaServiceProvider',
         'Johntaa\Captcha\CaptchaServiceProvider',
+        'Indatus\Dispatcher\ServiceProvider',
 
     ),
 

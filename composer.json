@@ -6,7 +6,7 @@
     "require": {
         "laravel/framework": "4.1.*",
         "intervention/image": "dev-master",
-        "yzalis/identicon": "1.0.*@dev",
+        "yzalis/identicon": "*",
         "michelf/php-markdown": "1.4.0",
         "nickcernis/html-to-markdown": "dev-master"
     },
@@ -16,8 +16,8 @@
         "five-say/vendor-cleaner": "1.*",
         "way/generators": "dev-master",
         "laravelbook/ardent": "dev-master",
-        "johntaa/captcha": "dev-master"
-        // "greggilbert/recaptcha": "dev-master"
+        "johntaa/captcha": "dev-master",
+        "indatus/dispatcher": "dev-master"
     },
     "autoload": {
         "classmap": [
