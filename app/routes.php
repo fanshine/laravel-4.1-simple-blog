@@ -3,6 +3,23 @@
 // 开发辅助（若无需要可以注释）
 include __DIR__.'/controllers/Assists/assist.php';
 
+Route::get('test-case', function () {
+    $date = Carbon::now()->addMinutes(2)->toTimeString();
+    // var_dump(date('Y-m-d H:i:s'));
+    var_dump($date);
+});
+
+Route::get('test-queue', function () {
+    // $message = "This is a queue test job. We won't really need to pass data for this demo.";
+    // Queue::push('QueueDemo', array('message' => $message));
+
+    Queue::push( 'QueueAuthorTest', ['message' => 'QueueAuthorTest']);
+    Queue::push(   'QueueUserTest', ['message' => 'QueueUserTest']);
+
+    // $str = emplode(',  ', $dates);
+    // @file_put_contents('/home/snowan/Documents/tmp/startQueueTimes.txt', $date = date('Y-m-d H:i:s'));
+});
+
 /*
 |--------------------------------------------------------------------------
 | 基础权限

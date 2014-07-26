@@ -14,3 +14,6 @@
 // $artisan->add(new UserGeneratorCommand);
 $user = new User;
 Artisan::add(new UserGeneratorCommand($user));
+
+Artisan::add(new SelectGeneratorCommand);
+Artisan::add(new QueueUserCommand);

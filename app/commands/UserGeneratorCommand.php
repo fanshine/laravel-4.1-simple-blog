@@ -30,7 +30,7 @@ class UserGeneratorCommand extends Command {
 	public function __construct(User $user)
 	{
 		parent::__construct();
-		$this->user = $user;
+		// $this->user = $user;
 	}
 
 	/**
@@ -40,24 +40,27 @@ class UserGeneratorCommand extends Command {
 	 */
 	public function fire()
 	{
-		$this->line('Welcome to the user generator.');
-		// $this->user->name = $this->argument('name');
-		// $email = $this->option('email');
-		// $this->line("User: {$name}'s email is {$email}");
-		$this->user->email = $this->argument('email');
-		$this->user->password = Hash::make($this->option('password'));
-		$correctPassword = false;
-		while( ! $correctPassword) {
-			if ( ! $this->confirm("Are you sure the password is {$this->option('password')} ? [yes|no]", true)) {
-				$this->user->password = Hash::make($this->ask('So what is your password?'));
-			} else {
-				$correctPassword = true;
-			}
-		}
-		$this->user->password_confirmation = $this->user->password;
-		$this->line($this->user->email . '  ' . $this->user->password . '  ' . $this->user->password_confirmation);
-		$this->user->save();
-		$this->info("{$this->user->email} has been generated and saved.");
+		// $this->line('Welcome to the user generator.');
+		// // $this->user->name = $this->argument('name');
+		// // $email = $this->option('email');
+		// // $this->line("User: {$name}'s email is {$email}");
+		// $this->user->email = $this->argument('email');
+		// $this->user->password = Hash::make($this->option('password'));
+		// $correctPassword = false;
+		// while( ! $correctPassword) {
+		// 	if ( ! $this->confirm("Are you sure the password is {$this->option('password')} ? [yes|no]", true)) {
+		// 		$this->user->password = Hash::make($this->ask('So what is your password?'));
+		// 	} else {
+		// 		$correctPassword = true;
+		// 	}
+		// }
+		// $this->user->password_confirmation = $this->user->password;
+		// $this->line($this->user->email . '  ' . $this->user->password . '  ' . $this->user->password_confirmation);
+		// $this->user->save();
+		// $this->info("{$this->user->email} has been generated and saved.");
+		//
+		Queue::later(2, 'QueueAuthorTest', ['message' => 'QueueAuthorTest']);
+		Queue::later(1,   'QueueUserTest', ['message' => 'QueueUserTest']);
 	}
 
 	/**
@@ -65,24 +68,24 @@ class UserGeneratorCommand extends Command {
 	 *
 	 * @return array
 	 */
-	protected function getArguments()
-	{
-		return array(
-			// array('name', InputArgument::REQUIRED, 'User Name.'),
-			array('email', InputArgument::REQUIRED, 'User Email.'),
-		);
-	}
+	// protected function getArguments()
+	// {
+	// 	return array(
+	// 		// array('name', InputArgument::REQUIRED, 'User Name.'),
+	// 		array('email', InputArgument::REQUIRED, 'User Email.'),
+	// 	);
+	// }
 
 	/**
 	 * Get the console command options.
 	 *
 	 * @return array
 	 */
-	protected function getOptions()
-	{
-		return array(
-			array('password', null, InputOption::VALUE_OPTIONAL, 'User Password.', null),
-		);
-	}
+	// protected function getOptions()
+	// {
+	// 	return array(
+	// 		array('password', null, InputOption::VALUE_OPTIONAL, 'User Password.', null),
+	// 	);
+	// }
 
 }

@@ -4,13 +4,13 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use LaravelBook\Ardent\Ardent;
 
-class User extends Ardent implements UserInterface, RemindableInterface
+class QueueAuthor extends Ardent implements UserInterface, RemindableInterface
 {
     /**
      * 数据库表名称（不包含前缀）
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'queue_authors';
 
     /**
      * 软删除

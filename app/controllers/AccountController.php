@@ -10,7 +10,7 @@ class AccountController extends BaseController
     {
         return View::make('account.index');
     }
-    
+
     /**
      * 页面：修改当前账号密码
      * @return Response
@@ -91,6 +91,7 @@ class AccountController extends BaseController
             'portrait.mimes'    => '请上传 :values 格式的图片。',
             'portrait.max'      => '图片的大小请控制在 1M 以内。',
         );
+        print_r($data);exit;
         // 开始验证
         $validator = Validator::make($data, $rules, $messages);
         if ($validator->passes()) {
