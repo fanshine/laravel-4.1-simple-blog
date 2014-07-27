@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4d7ffa514f995703c9bf208244835a9e",
+    "hash": "41ee4948091d85ab75c728356fac994d",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -144,12 +144,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "fc0c20277260f09aa0bd172d66d8b39957c50078"
+                "reference": "45099a0c789df8d374e237699fe8f7ab8c405cb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/fc0c20277260f09aa0bd172d66d8b39957c50078",
-                "reference": "fc0c20277260f09aa0bd172d66d8b39957c50078",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/45099a0c789df8d374e237699fe8f7ab8c405cb4",
+                "reference": "45099a0c789df8d374e237699fe8f7ab8c405cb4",
                 "shasum": ""
             },
             "require": {
@@ -194,7 +194,7 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2014-06-30 15:30:03"
+            "time": "2014-07-26 10:51:13"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -613,19 +613,20 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v0.9.4",
+            "version": "v0.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "1e5e280ae88a27effa2ae4aa2bd088494ed8594f"
+                "reference": "ef70767475434bdb3615b43c327e2cae17ef12eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1e5e280ae88a27effa2ae4aa2bd088494ed8594f",
-                "reference": "1e5e280ae88a27effa2ae4aa2bd088494ed8594f",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/ef70767475434bdb3615b43c327e2cae17ef12eb",
+                "reference": "ef70767475434bdb3615b43c327e2cae17ef12eb",
                 "shasum": ""
             },
             "require": {
+                "ext-tokenizer": "*",
                 "php": ">=5.2"
             },
             "type": "library",
@@ -653,7 +654,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2013-08-25 17:11:40"
+            "time": "2014-07-23 18:24:17"
         },
         {
             "name": "patchwork/utf8",
@@ -705,6 +706,48 @@
                 "utf8"
             ],
             "time": "2014-06-17 08:23:06"
+        },
+        {
+            "name": "pda/pheanstalk",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pda/pheanstalk.git",
+                "reference": "e920e179cc4061defdab397f9dc59580f214a600"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pda/pheanstalk/zipball/e920e179cc4061defdab397f9dc59580f214a600",
+                "reference": "e920e179cc4061defdab397f9dc59580f214a600",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Pheanstalk": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Annesley",
+                    "email": "paul@annesley.cc",
+                    "homepage": "http://paul.annesley.cc/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP client for beanstalkd queue",
+            "homepage": "https://github.com/pda/pheanstalk",
+            "keywords": [
+                "beanstalkd"
+            ],
+            "time": "2013-03-25 20:50:19"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -1939,12 +1982,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Indatus/dispatcher.git",
-                "reference": "fca577f85707526e6c21574ec80a7f5677d92e31"
+                "reference": "1bd678122d12edfea7bb429f80e798be27c46530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Indatus/dispatcher/zipball/fca577f85707526e6c21574ec80a7f5677d92e31",
-                "reference": "fca577f85707526e6c21574ec80a7f5677d92e31",
+                "url": "https://api.github.com/repos/Indatus/dispatcher/zipball/1bd678122d12edfea7bb429f80e798be27c46530",
+                "reference": "1bd678122d12edfea7bb429f80e798be27c46530",
                 "shasum": ""
             },
             "require": {
@@ -1984,7 +2027,7 @@
                 "laravel",
                 "schedule"
             ],
-            "time": "2014-07-19 01:26:07"
+            "time": "2014-07-23 12:04:44"
         },
         {
             "name": "johntaa/captcha",

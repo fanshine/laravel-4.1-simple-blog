@@ -8,7 +8,8 @@
         "intervention/image": "dev-master",
         "yzalis/identicon": "*",
         "michelf/php-markdown": "1.4.0",
-        "nickcernis/html-to-markdown": "dev-master"
+        "nickcernis/html-to-markdown": "dev-master",
+        "pda/pheanstalk": "2.0.*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "1.*",

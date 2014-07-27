@@ -59,8 +59,9 @@ class UserGeneratorCommand extends Command {
 		// $this->user->save();
 		// $this->info("{$this->user->email} has been generated and saved.");
 		//
-		Queue::later(2, 'QueueAuthorTest', ['message' => 'QueueAuthorTest']);
-		Queue::later(1,   'QueueUserTest', ['message' => 'QueueUserTest']);
+		Queue::push('QueueAuthorTest', ['message' => 'QueueAuthorTest']);
+		Queue::push(  'QueueUserTest', ['message' => 'QueueUserTest']);
+		Queue::push('QueueTesterTest', ['message' => 'QueueTesterTest']);
 	}
 
 	/**
