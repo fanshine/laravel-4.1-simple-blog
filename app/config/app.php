@@ -117,6 +117,7 @@ return array(
         // 'Greggilbert\Recaptcha\RecaptchaServiceProvider',
         'Johntaa\Captcha\CaptchaServiceProvider',
         'Indatus\Dispatcher\ServiceProvider',
+        'Flatten\FlattenServiceProvider',
 
     ),
 
@@ -189,6 +190,7 @@ return array(
         'Identicon'       => 'Identicon\Identicon',
         // 'Captcha'         => 'Gwill\LaravelCaptcha\Facades\LaravelCaptcha',
         'Captcha'         => 'Johntaa\Captcha\Facades\Captcha',
+        'Flatten'         => 'Flatten\Facades\Flatten',
 
     ),
 
