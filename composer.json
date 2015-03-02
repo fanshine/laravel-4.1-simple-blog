@@ -9,16 +9,17 @@
         "yzalis/identicon": "*",
         "michelf/php-markdown": "1.4.0",
         "nickcernis/html-to-markdown": "dev-master",
-        "pda/pheanstalk": "2.0.*"
+        "pda/pheanstalk": "2.0.*",
+        "anahkiasen/flatten": "0.5.*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "1.*",
         "phpunit/phpunit": "3.7.*",
         "five-say/vendor-cleaner": "1.*",
-        "way/generators": "dev-master",
+        "way/generators": "~2.0",
         "laravelbook/ardent": "dev-master",
         "johntaa/captcha": "dev-master",
-        "indatus/dispatcher": "dev-master"
+        "indatus/dispatcher": "1.4.*"
     },
     "autoload": {
         "classmap": [
